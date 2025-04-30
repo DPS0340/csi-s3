@@ -40,7 +40,7 @@ COPY --from=s3backer /usr/bin/s3backer /usr/bin/s3backer
 # s3fs and some other dependencies
 RUN apt-get update && \
     apt-get install -y \
-    libfuse2 gcc sqlite3 libsqlite3-dev \
+    libfuse2 fuse3 gcc sqlite3 libsqlite3-dev \
     s3fs psmisc procps libcurl4 xfsprogs curl unzip && \
     rm -rf /var/lib/apt/lists/*
 

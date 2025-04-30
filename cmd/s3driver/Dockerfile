@@ -13,7 +13,7 @@ LABEL description="csi-s3 slim image"
 # s3fs and some other dependencies
 RUN apt-get update && \
     apt-get install -y \
-    s3fs curl unzip && \
+    s3fs curl unzip fuse3 && \
     rm -rf /var/lib/apt/lists/*
 
 # install rclone
